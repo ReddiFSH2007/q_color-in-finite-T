@@ -5,7 +5,7 @@ This repository contains a highly optimized C++ implementation for calculating t
 ## How to Run
 
 ### 1. Compile
-g++ -O3 -march=native -fopenmp main.cpp main
+g++ -O3 -march=native -fopenmp main.cpp -o main
 
 ### 2. Execute
 .\main.exe
