@@ -288,17 +288,22 @@ long long floatToModInt(float w) {
 }
 
 int main() {         
-    int q = 3;            
+    // int q = 3;            
     int d[] = {1, 1, 2, 4, 10, 26, 76, 232, 750, 2494, 8524, 29624, 104468}; 
+    // theoretical minimum degree for q>=4, and of course greater than q=2 and 3;
     
     float w_float = 0.1f;
     long long w_mod = floatToModInt(w_float);
     
-    cout << fixed << setprecision(1) << w_float << " (mod " << w_mod << ") : ";
+    cout << fixed << setprecision(1) << "w = " << w_float << " (mod " << w_mod << ")" << endl;
     
-    for (int m = 0; m < 12; ++m) {
-        solve(m, q, w_mod, 2 * d[m] + 50); 
+    for (int q = 2; q <= 6; q++) {
+        cout << "q = " << q << " : ";
+        for (int m = 1; m < 12; ++m) {
+            solve(m, q, w_mod, 2 * d[m] + 50); 
+        }
+        cout << endl;
     }
-    cout << endl;
+    
     return 0;
 }
