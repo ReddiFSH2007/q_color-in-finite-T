@@ -11,7 +11,7 @@ g++ -O3 -march=native -fopenmp main.cpp -o main
 .\main.exe
 
 ### 3. Expected Output
-w = 0.1 (mod 1503238553)
+w = 0.1 (mod 1503238553)<br>
 
 q = 2 : 1 2 3 6 10 20 35 70 126 252 462 
 
